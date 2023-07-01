@@ -8,14 +8,15 @@ class AuthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        physics: AlwaysScrollableScrollPhysics(), // تفعيل التمرير
         child: Column(
           children: <Widget>[
             Container(
               height: MediaQuery.of(context).size.height * 0.5,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(52),
-                  bottomRight: Radius.circular(52),
+                  bottomLeft: Radius.circular(77),
+                  bottomRight: Radius.circular(77),
                 ),
                 image: DecorationImage(
                   image: AssetImage('assets/photho_che.jpg'),
@@ -23,7 +24,8 @@ class AuthScreen extends StatelessWidget {
                 ),
               ),
             ),
-            AuthForm(), // Place AuthForm below the image
+
+            AuthForm(), // وضع AuthForm تحت الصورة
           ],
         ),
       ),
